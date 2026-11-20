@@ -1,4 +1,7 @@
 import { Product } from './types';
+import teamZonoFront from './assets/images/team-zono-front.webp';
+import teamZonoBack from './assets/images/team-zono-back.webp';
+import teamZonoPrint from './assets/images/team-zono-print.webp';
 import zono1 from './components/zono1.JPG';
 import zono11 from './components/zono11.jpg';
 import zono3 from './components/zono3.jpg';
@@ -12,9 +15,6 @@ import zono7 from './components/zono7.JPG';
 import zono71 from './components/zono71.jpg';
 import zono72 from './components/zono72.jpg';
 import zono73 from './components/zono73.jpg';
-import zono200 from './components/zono200.jpg';
-import zono201 from './components/zono201.jpg';
-import zono203 from './components/zono203.jpg';
 import zonozono from './components/zonozono.jpg';
 import zonozono3 from './components/zonozono3.jpg';
 import zono400 from './components/zono400.jpg';
@@ -100,8 +100,8 @@ export const products: Product[] = [
     name: '『TEAM ZONO』T-Shirt',
     description: '応援Tシャツとして初めて作った後ろに大きいロゴが入ったTシャツ',
     price: 4000,
-    imageUrl: zono203,
-    imageUrls: [zono201, zono200],
+    imageUrl: teamZonoFront,
+    imageUrls: [teamZonoBack, teamZonoPrint],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M'],
