@@ -3,10 +3,6 @@ import zono1 from './components/zono1.JPG';
 import zono11 from './components/zono11.jpg';
 import zono3 from './components/zono3.jpg';
 import zono31 from './components/zono31.jpg';
-import zono4 from './components/zono4.JPG';
-import zono41 from './components/zono41.jpg';
-import zono42 from './components/zono42.jpg';
-import zono43 from './components/zono43.jpg';
 import zono5 from './components/zono5.jpeg';
 import zono51 from './components/zono51.jpg';
 import zono52 from './components/zono52.jpg';
@@ -38,7 +34,8 @@ import img_5051 from './assets/images/IMG_5051.jpg';
 import img_9a2d78ef from './assets/images/IMG_9A2D78EF-4001-485E-93E2-0FBA6EE572F9.jpg';
 import img_5134 from './assets/images/IMG_5134.jpg';
 import img_5135 from './assets/images/IMG_5135.jpg';
-import img_5143 from './assets/images/IMG_5143.PNG';
+import lionFront from './assets/images/lion-front.webp';
+import lionPose from './assets/images/lion-pose.webp';
 import img_5144 from './assets/images/IMG_5144.PNG';
 import img_5145 from './assets/images/IMG_5145.PNG';
 import img_5146 from './assets/images/IMG_5146.PNG';
@@ -115,8 +112,8 @@ export const products: Product[] = [
     name: '『LION』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2024 2nd ROUNDにて着用したドライTシャツ',
     price: 4000,
-    imageUrl: img_5143,
-    imageUrls: [zono4, zono42, zono43, zonozono, zonozono3, zono41],
+    imageUrl: lionFront,
+    imageUrls: [lionPose],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'XL'],
