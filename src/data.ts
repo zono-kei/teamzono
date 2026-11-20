@@ -21,10 +21,6 @@ import zono201 from './components/zono201.jpg';
 import zono203 from './components/zono203.jpg';
 import zonozono from './components/zonozono.jpg';
 import zonozono3 from './components/zonozono3.jpg';
-import zono100 from './components/zono100.jpg';
-import zono101 from './components/zono101.jpg';
-import zono102 from './components/zono102.jpg';
-import zono103 from './components/zono103.jpg';
 import zono400 from './components/zono400.jpg';
 import zono401 from './components/zono401.jpg';
 import zono9 from './components/zono9.jpg';
@@ -49,7 +45,10 @@ import img_5146 from './assets/images/IMG_5146.PNG';
 import img_5147 from './assets/images/IMG_5147.PNG';
 import img_5148 from './assets/images/IMG_5148.PNG';
 import img_b85a2cea from './assets/images/IMG_B85A2CEA-86CF-4F9B-97FC-ADB66AD2F4AD.jpg';
-import img_10 from './assets/images/10.png';
+import hotokeFront from './assets/images/hotoke-front.webp';
+import hotokeAngle from './assets/images/hotoke-angle.webp';
+import hotokeBack from './assets/images/hotoke-back.webp';
+import hotokePrint from './assets/images/hotoke-print.webp';
 import zono21 from './components/zono21.jpg';
 import zono22 from './components/zono22.jpg';
 import zono23 from './components/zono23.jpg';
@@ -92,8 +91,8 @@ export const products: Product[] = [
     name: '『仏』Dry T-Shirt',
     description: 'ONE Champion Shipに出場した際に日本の精神を忘れないようにデザインされたTシャツ',
     price: 4000,
-    imageUrl: img_10,
-    imageUrls: [zono100, zono103, zono101, zono102],
+    imageUrl: hotokeFront,
+    imageUrls: [hotokeAngle, hotokeBack, hotokePrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['L', 'XL'],
