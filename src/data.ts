@@ -1,3 +1,13 @@
+import animeDryFront from './assets/images/anime-dry-front.webp';
+import animeDryAngle from './assets/images/anime-dry-angle.webp';
+import animeDryPrint from './assets/images/anime-dry-print.webp';
+import butterflyFront from './assets/images/butterfly-front.webp';
+import butterflyPrint from './assets/images/butterfly-print.webp';
+import darumaDryFront from './assets/images/daruma-dry-front.webp';
+import darumaDryPrint from './assets/images/daruma-dry-print.webp';
+import covidBlackFront from './assets/images/covid-black-front.webp';
+import covidBlackAngle from './assets/images/covid-black-angle.webp';
+import covidBlackBack from './assets/images/covid-black-back.webp';
 import { Product } from './types';
 import teamZonoFront from './assets/images/team-zono-front.webp';
 import teamZonoBack from './assets/images/team-zono-back.webp';
@@ -32,15 +42,11 @@ import img_5094 from './assets/images/IMG_5094.jpg';
 import img_5047 from './assets/images/IMG_5047.jpg';
 import img_5051 from './assets/images/IMG_5051.jpg';
 import img_9a2d78ef from './assets/images/IMG_9A2D78EF-4001-485E-93E2-0FBA6EE572F9.jpg';
-import img_5134 from './assets/images/IMG_5134.jpg';
 import img_5135 from './assets/images/IMG_5135.jpg';
 import lionFront from './assets/images/lion-front.webp';
 import lionPose from './assets/images/lion-pose.webp';
 import img_5144 from './assets/images/IMG_5144.PNG';
 import img_5145 from './assets/images/IMG_5145.PNG';
-import img_5146 from './assets/images/IMG_5146.PNG';
-import img_5147 from './assets/images/IMG_5147.PNG';
-import img_5148 from './assets/images/IMG_5148.PNG';
 import img_b85a2cea from './assets/images/IMG_B85A2CEA-86CF-4F9B-97FC-ADB66AD2F4AD.jpg';
 import hotokeFront from './assets/images/hotoke-front.webp';
 import hotokeAngle from './assets/images/hotoke-angle.webp';
@@ -100,8 +106,8 @@ export const products: Product[] = [
     name: '『TEAM ZONO』T-Shirt',
     description: '応援Tシャツとして初めて作った後ろに大きいロゴが入ったTシャツ',
     price: 4000,
-    imageUrl: teamZonoFront,
-    imageUrls: [teamZonoBack, teamZonoPrint],
+    imageUrl: teamZonoBack,
+    imageUrls: [teamZonoFront, teamZonoPrint],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M'],
@@ -136,8 +142,8 @@ export const products: Product[] = [
     name: '『butterfly』Dry T-Shirt',
     description: 'DEEP TOKYO IMPACT 2024 1st ROUNDの応援Tシャツ',
     price: 4000,
-    imageUrl: img_5146,
-    imageUrls: [zono5, zono51, zono52, zono53, zonozono, zonozono3],
+    imageUrl: butterflyFront,
+    imageUrls: [butterflyPrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -149,8 +155,8 @@ export const products: Product[] = [
     name: '『DARUMA』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2023 3nd ROUNDの応援Tシャツ',
     price: 4000,
-    imageUrl: img_5147,
-    imageUrls: [daruma, zono7, zono71, zono72, zono73],
+    imageUrl: darumaDryFront,
+    imageUrls: [darumaDryPrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -201,8 +207,8 @@ export const products: Product[] = [
     name: '『COVID-19』Dry T-Shirt(BLACK)',
     description: 'コロナの時期に作った頑張ろうという意味を込めて作ったドライTシャツ',
     price: 4000,
-    imageUrl: img_5134,
-    imageUrls: [zono21, zono22, zono23],
+    imageUrl: covidBlackFront,
+    imageUrls: [covidBlackAngle, covidBlackBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     series: 'notorious qupid'
@@ -236,8 +242,8 @@ export const products: Product[] = [
     name: '『ANIME』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2025 4th ROUNDの際に着用したドライTシャツ',
     price: 4000,
-    imageUrl: img_5148,
-    imageUrls: [zono300, zono301, zono303],
+    imageUrl: animeDryFront,
+    imageUrls: [animeDryAngle, animeDryPrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
