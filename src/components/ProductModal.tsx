@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronLeft, ChevronRight, ShoppingCart } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
   product: Product | null;
   isOpen: boolean;
   onClose: () => void;
-  onAddToCart: (product: Product, size: string) => void;
 }
 
-export function ProductModal({ product, isOpen, onClose, onAddToCart }: ProductModalProps) {
+export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -37,13 +36,6 @@ export function ProductModal({ product, isOpen, onClose, onAddToCart }: ProductM
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const handleAddToCart = () => {
-    if (selectedSize) {
-      onAddToCart(product, selectedSize);
-      onClose();
-    }
   };
 
   return (
@@ -146,13 +138,13 @@ export function ProductModal({ product, isOpen, onClose, onAddToCart }: ProductM
               <div className="mt-auto pt-6 border-t border-zinc-900">
                 {product.isSoldOut ? (
                   <div className="bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold text-center py-4 rounded-lg uppercase tracking-widest shrink-0">
-                    Sold Out
+                    売り切れ
                   </div>
                 ) : (
                   <>
                     <div className="mb-6">
                       <div className="flex justify-between items-center mb-3">
-                        <span className="text-white font-medium uppercase tracking-wide text-sm">Select Size</span>
+                        <span className="text-white font-medium uppercase tracking-wide text-sm">サイズ</span>
                         {selectedSize && <span className="text-zinc-400 text-sm font-bold">{selectedSize}</span>}
                       </div>
                       <div className="flex flex-wrap gap-2">
@@ -178,18 +170,12 @@ export function ProductModal({ product, isOpen, onClose, onAddToCart }: ProductM
                       </div>
                     </div>
                     
-                    <button
-                      onClick={handleAddToCart}
-                      disabled={!selectedSize}
-                      className={`w-full py-4 rounded-lg font-display font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-colors shrink-0 ${
-                        !selectedSize 
-                          ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
-                          : 'bg-white text-black hover:bg-zinc-200'
-                      }`}
-                    >
-                      <ShoppingCart className="w-5 h-5" />
-                      {selectedSize ? 'Add to Cart' : 'Select a Size'}
-                    </button>
+                    <p className="mb-3 text-sm text-zinc-300">
+                      DMに商品名と希望サイズ{selectedSize ? `（${selectedSize}）` : ''}をお送りください。
+                    </p>
+                    <a href="https://www.instagram.com/zono_mma/" className="block rounded-lg bg-white px-4 py-3 text-center font-semibold text-black hover:bg-blue-200">
+                      Instagramで問い合わせる
+                    </a>
                   </>
                 )}
               </div>
