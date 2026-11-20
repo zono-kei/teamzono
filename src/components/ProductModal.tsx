@@ -10,6 +10,7 @@ interface ProductModalProps {
 }
 
 export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
+  const [failedImages, setFailedImages] = useState<string[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -28,14 +29,16 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
 
   if (!product) return null;
 
-  const images = [product.imageUrl, ...(product.imageUrls || [])];
+  const images = [...new Set([product.imageUrl, ...(product.imageUrls || [])])].filter(image => !failedImages.includes(image));
+  const visibleIndex = Math.min(currentImageIndex, images.length - 1);
+  const currentImage = images[visibleIndex];
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    setCurrentImageIndex((visibleIndex + 1) % images.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentImageIndex((visibleIndex - 1 + images.length) % images.length);
   };
 
   return (
@@ -63,7 +66,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             </button>
 
             {/* Image Gallery */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full relative bg-zinc-900 group">
+            {currentImage && <div className="w-full md:w-1/2 h-1/2 md:h-full relative bg-zinc-900 group">
               {images.length > 1 && (
                 <>
                   <button 
@@ -84,12 +87,13 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
               <div className="w-full h-full relative overflow-hidden flex items-center justify-center p-4">
                 <AnimatePresence mode="wait">
                   <motion.img 
-                    key={currentImageIndex}
+                    key={currentImage}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    src={images[currentImageIndex]}
+                    src={currentImage}
+                    onError={() => setFailedImages(images => [...images, currentImage])}
                     alt={`${product.name} - image ${currentImageIndex + 1}`}
                     className="w-full h-full object-contain"
                   />
@@ -102,7 +106,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                     <button 
                       key={idx} 
                       onClick={() => setCurrentImageIndex(idx)}
-                      className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${idx === currentImageIndex ? 'bg-white w-4 md:w-6' : 'bg-white/40 hover:bg-white/60'}`}
+                      className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${idx === visibleIndex ? 'bg-white w-4 md:w-6' : 'bg-white/40 hover:bg-white/60'}`}
                     />
                   ))}
                 </div>
@@ -118,10 +122,10 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                   </button>
                 </div>
               )}
-            </div>
+            </div>}
 
             {/* Product Details */}
-            <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col h-1/2 md:h-full overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-800">
+            <div className={`w-full p-6 md:p-10 flex flex-col overflow-y-auto ${currentImage ? "h-1/2 md:h-full md:w-1/2" : "h-full"}`}>
               <div className="mb-2">
                 <span className="text-zinc-500 text-sm font-medium tracking-wider uppercase">{product.series}</span>
               </div>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { products } from './data';
 import type { Product } from './types';
 import { ProductModal } from './components/ProductModal';
-import teamZonoLogo from './components/TEAMZONO.PNG';
 
 const series = ['TEAM ZONO', 'GOAT apparel', 'notorious qupid'] as const;
 const instagram = 'https://www.instagram.com/zono_mma/';
@@ -14,7 +13,7 @@ export default function App() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <header className="border-b border-zinc-800">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-          <img src={teamZonoLogo} alt="TEAM ZONO" className="w-28 sm:w-40" />
+          <span className="font-display text-lg font-bold tracking-tight">TEAM ZONO</span>
           <a className="rounded-full border border-zinc-700 px-4 py-2 text-sm font-semibold hover:border-white" href={instagram}>@zono_mma</a>
         </div>
       </header>
@@ -34,7 +33,7 @@ export default function App() {
                 const sizes = product.isSoldOut ? [] : product.sizes.filter(size => !product.soldOutSizes?.includes(size));
                 return (
                   <button key={product.id} type="button" onClick={() => setSelected(product)} className="group flex h-full flex-col overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 text-left hover:border-blue-300 focus-visible:outline-2 focus-visible:outline-blue-300">
-                    <img src={product.imageUrl} alt="" loading="lazy" className="aspect-square w-full bg-zinc-950 object-cover" />
+                    <img src={product.imageUrl} alt="" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} className="aspect-square w-full bg-zinc-950 object-cover" />
                     <div className="flex flex-1 flex-col gap-2 p-3 sm:p-4">
                       <span className="text-sm font-bold leading-snug sm:text-base">{product.name}</span>
                       <span className="mt-auto font-semibold">¥{product.price.toLocaleString('ja-JP')}</span>
