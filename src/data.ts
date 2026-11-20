@@ -1,3 +1,10 @@
+import goatLongAngle from './assets/images/goat-long-angle.webp';
+import goatLongFront from './assets/images/goat-long-front.webp';
+import goatLogoFront from './assets/images/goat-logo-front.webp';
+import goatLogoPrint from './assets/images/goat-logo-print.webp';
+import goatCapWorn from './assets/images/goat-cap-worn.webp';
+import goatCapDetail from './assets/images/goat-cap-detail.webp';
+import keizonoWhiteBack from './assets/images/keizono-white-back.webp';
 import animeDryFront from './assets/images/anime-dry-front.webp';
 import animeDryAngle from './assets/images/anime-dry-angle.webp';
 import animeDryPrint from './assets/images/anime-dry-print.webp';
@@ -41,11 +48,9 @@ import img_5117 from './assets/images/IMG_5117.jpg';
 import img_5094 from './assets/images/IMG_5094.jpg';
 import img_5047 from './assets/images/IMG_5047.jpg';
 import img_5051 from './assets/images/IMG_5051.jpg';
-import img_9a2d78ef from './assets/images/IMG_9A2D78EF-4001-485E-93E2-0FBA6EE572F9.jpg';
 import img_5135 from './assets/images/IMG_5135.jpg';
 import lionFront from './assets/images/lion-front.webp';
 import lionPose from './assets/images/lion-pose.webp';
-import img_5144 from './assets/images/IMG_5144.PNG';
 import img_5145 from './assets/images/IMG_5145.PNG';
 import img_b85a2cea from './assets/images/IMG_B85A2CEA-86CF-4F9B-97FC-ADB66AD2F4AD.jpg';
 import hotokeFront from './assets/images/hotoke-front.webp';
@@ -119,7 +124,7 @@ export const products: Product[] = [
     description: 'DEEP OSAKA IMPACT 2024 2nd ROUNDにて着用したドライTシャツ',
     price: 4000,
     imageUrl: lionFront,
-    imageUrls: [lionPose],
+    imageUrls: [lionPose, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'XL'],
@@ -143,7 +148,7 @@ export const products: Product[] = [
     description: 'DEEP TOKYO IMPACT 2024 1st ROUNDの応援Tシャツ',
     price: 4000,
     imageUrl: butterflyFront,
-    imageUrls: [butterflyPrint],
+    imageUrls: [butterflyPrint, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -156,7 +161,7 @@ export const products: Product[] = [
     description: 'DEEP OSAKA IMPACT 2023 3nd ROUNDの応援Tシャツ',
     price: 4000,
     imageUrl: darumaDryFront,
-    imageUrls: [darumaDryPrint],
+    imageUrls: [darumaDryPrint, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -168,8 +173,8 @@ export const products: Product[] = [
     name: 'GOAT Logo T-Shirt',
     description: 'GOAT apparel定番のロゴTシャツ',
     price: 4000,
-    imageUrl: img_5144,
-    imageUrls: [zono400, zono401],
+    imageUrl: goatLogoFront,
+    imageUrls: [goatLogoPrint],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -181,8 +186,8 @@ export const products: Product[] = [
     name: 'GOAT ZONO color Long T-Shirt',
     description: 'GOATジムのヤギマークとTEAM ZONOのコラボデザインのロンTです。',
     price: 4500,
-    imageUrl: img_9a2d78ef,
-    imageUrls: [zono9, zono91],
+    imageUrl: goatLongAngle,
+    imageUrls: [goatLongFront],
     category: 'Long Sleeve',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -194,8 +199,8 @@ export const products: Product[] = [
     name: 'GOAT TEAM ZONO Cap',
     description: 'GOATジムのヤギマークとTEAM ZONOのコラボデザインの帽子です。',
     price: 4500,
-    imageUrl: zono8,
-    imageUrls: [zono82, zono83],
+    imageUrl: goatCapWorn,
+    imageUrls: [goatCapDetail],
     category: 'Cap',
     sizes: ['Free'],
     soldOutSizes: ['Free'],
