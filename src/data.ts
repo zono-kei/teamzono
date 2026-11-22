@@ -1,3 +1,13 @@
+import hotokeCover from './assets/images/hotoke-cover.webp';
+import lionCover from './assets/images/lion-cover.webp';
+import butterflyCover from './assets/images/butterfly-cover.webp';
+import darumaDryCover from './assets/images/daruma-dry-cover.webp';
+import animeVintageCover from './assets/images/anime-vintage-cover.webp';
+import animeVintageWorn from './assets/images/anime-vintage-worn.webp';
+import goatLongCover from './assets/images/goat-long-cover.webp';
+import goatLogoCover from './assets/images/goat-logo-cover.webp';
+import qupidLogoCover from './assets/images/qupid-logo-cover.webp';
+import animeDryCover from './assets/images/anime-dry-cover.webp';
 import goatLongAngle from './assets/images/goat-long-angle.webp';
 import goatLongFront from './assets/images/goat-long-front.webp';
 import goatLogoFront from './assets/images/goat-logo-front.webp';
@@ -19,8 +29,6 @@ import { Product } from './types';
 import teamZonoFront from './assets/images/team-zono-front.webp';
 import teamZonoBack from './assets/images/team-zono-back.webp';
 import teamZonoPrint from './assets/images/team-zono-print.webp';
-import zono1 from './components/zono1.JPG';
-import zono11 from './components/zono11.jpg';
 import zono3 from './components/zono3.jpg';
 import zono31 from './components/zono31.jpg';
 import zono5 from './components/zono5.jpeg';
@@ -48,11 +56,8 @@ import img_5117 from './assets/images/IMG_5117.jpg';
 import img_5094 from './assets/images/IMG_5094.jpg';
 import img_5047 from './assets/images/IMG_5047.jpg';
 import img_5051 from './assets/images/IMG_5051.jpg';
-import img_5135 from './assets/images/IMG_5135.jpg';
 import lionFront from './assets/images/lion-front.webp';
 import lionPose from './assets/images/lion-pose.webp';
-import img_5145 from './assets/images/IMG_5145.PNG';
-import img_b85a2cea from './assets/images/IMG_B85A2CEA-86CF-4F9B-97FC-ADB66AD2F4AD.jpg';
 import hotokeFront from './assets/images/hotoke-front.webp';
 import hotokeAngle from './assets/images/hotoke-angle.webp';
 import hotokeBack from './assets/images/hotoke-back.webp';
@@ -87,8 +92,8 @@ export const products: Product[] = [
     name: '『ANIME』vintage T-Shirt',
     description: '中国のWKGでフェザー級のタイトルマッチの際に作ったビンテージ風Tシャツ',
     price: 4000,
-    imageUrl: img_b85a2cea,
-    imageUrls: [zono1, zono11],
+    imageUrl: animeVintageCover,
+    imageUrls: [animeVintageWorn],
     category: 'vintage T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['L'],
@@ -99,8 +104,8 @@ export const products: Product[] = [
     name: '『仏』Dry T-Shirt',
     description: 'ONE Champion Shipに出場した際に日本の精神を忘れないようにデザインされたTシャツ',
     price: 4000,
-    imageUrl: hotokeFront,
-    imageUrls: [hotokeAngle, hotokeBack, hotokePrint],
+    imageUrl: hotokeCover,
+    imageUrls: [hotokeFront, hotokeAngle, hotokeBack, hotokePrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['L', 'XL'],
@@ -123,8 +128,8 @@ export const products: Product[] = [
     name: '『LION』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2024 2nd ROUNDにて着用したドライTシャツ',
     price: 4000,
-    imageUrl: lionFront,
-    imageUrls: [lionPose, keizonoWhiteBack],
+    imageUrl: lionCover,
+    imageUrls: [lionFront, lionPose, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'XL'],
@@ -147,8 +152,8 @@ export const products: Product[] = [
     name: '『butterfly』Dry T-Shirt',
     description: 'DEEP TOKYO IMPACT 2024 1st ROUNDの応援Tシャツ',
     price: 4000,
-    imageUrl: butterflyFront,
-    imageUrls: [butterflyPrint, keizonoWhiteBack],
+    imageUrl: butterflyCover,
+    imageUrls: [butterflyFront, butterflyPrint, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -160,8 +165,8 @@ export const products: Product[] = [
     name: '『DARUMA』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2023 3nd ROUNDの応援Tシャツ',
     price: 4000,
-    imageUrl: darumaDryFront,
-    imageUrls: [darumaDryPrint, keizonoWhiteBack],
+    imageUrl: darumaDryCover,
+    imageUrls: [darumaDryFront, darumaDryPrint, keizonoWhiteBack],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -173,8 +178,8 @@ export const products: Product[] = [
     name: 'GOAT Logo T-Shirt',
     description: 'GOAT apparel定番のロゴTシャツ',
     price: 4000,
-    imageUrl: goatLogoFront,
-    imageUrls: [goatLogoPrint],
+    imageUrl: goatLogoCover,
+    imageUrls: [goatLogoFront, goatLogoPrint],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -186,8 +191,8 @@ export const products: Product[] = [
     name: 'GOAT ZONO color Long T-Shirt',
     description: 'GOATジムのヤギマークとTEAM ZONOのコラボデザインのロンTです。',
     price: 4500,
-    imageUrl: goatLongAngle,
-    imageUrls: [goatLongFront],
+    imageUrl: goatLongCover,
+    imageUrls: [goatLongAngle, goatLongFront],
     category: 'Long Sleeve',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -247,8 +252,8 @@ export const products: Product[] = [
     name: '『ANIME』Dry T-Shirt',
     description: 'DEEP OSAKA IMPACT 2025 4th ROUNDの際に着用したドライTシャツ',
     price: 4000,
-    imageUrl: animeDryFront,
-    imageUrls: [animeDryAngle, animeDryPrint],
+    imageUrl: animeDryCover,
+    imageUrls: [animeDryFront, animeDryAngle, animeDryPrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
@@ -260,8 +265,7 @@ export const products: Product[] = [
     name: 'Qupid Logo T-Shirt',
     description: 'Notoious Qupid定番のロゴTシャツ',
     price: 4000,
-    imageUrl: img_5145,
-    imageUrls: [img_5145, img_5135],
+    imageUrl: qupidLogoCover,
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     series: 'notorious qupid'
