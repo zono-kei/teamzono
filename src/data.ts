@@ -1,3 +1,10 @@
+import teamZonoCover from './assets/images/team-zono-cover.webp';
+import teamZono2BlackCover from './assets/images/team-zono-2-black-cover.webp';
+import teamZono2BlackWorn from './assets/images/team-zono-2-black-worn.webp';
+import teamZono2BlackPrint from './assets/images/team-zono-2-black-print.webp';
+import teamZono2WhiteCover from './assets/images/team-zono-2-white-cover.webp';
+import teamZono2WhiteWorn from './assets/images/team-zono-2-white-worn.webp';
+import teamZono2WhitePrint from './assets/images/team-zono-2-white-print.webp';
 import gpCover from './assets/images/gp-cover.webp';
 import gpLogo from './assets/images/gp-logo.webp';
 import gpLogoAngle from './assets/images/gp-logo-angle.webp';
@@ -77,6 +84,28 @@ import zono23 from './components/zono23.jpg';
 
 export const products: Product[] = [
   {
+    id: '17',
+    name: '『TEAM ZONO 2 BLACK』Dry T-Shirt',
+    description: 'TEAM ZONOの新しいTシャツで中央に青の薔薇のイメージのデザインをあしらった運動に適したドライTシャツ',
+    price: 4000,
+    imageUrl: teamZono2BlackCover,
+    imageUrls: [teamZono2BlackWorn, teamZono2BlackPrint],
+    category: 'Dry T-Shirt',
+    sizes: ['S', 'M', 'L', 'XL'],
+    series: 'TEAM ZONO'
+  },
+  {
+    id: '18',
+    name: '『TEAM ZONO 2 WHITE』Dry T-Shirt',
+    description: 'TEAM ZONOの新しいTシャツで中央に青の薔薇のイメージのデザインをあしらった運動に適したドライTシャツ',
+    price: 4000,
+    imageUrl: teamZono2WhiteCover,
+    imageUrls: [teamZono2WhiteWorn, teamZono2WhitePrint],
+    category: 'Dry T-Shirt',
+    sizes: ['S', 'M', 'L', 'XL'],
+    series: 'TEAM ZONO'
+  },
+  {
     id: '15',
     name: 'DEEP WEST JAPAN BANTAM WEIGHT GP 『ZONO』　T-Shirt',
     description: 'DEEP WEST JAPAN BANTAM WEIGHT GP 2026トーナメントの際に着用する応援Tシャツ\nこれを着て一緒に戦ってください！！',
@@ -117,8 +146,8 @@ export const products: Product[] = [
     name: '『TEAM ZONO』T-Shirt',
     description: '応援Tシャツとして初めて作った後ろに大きいロゴが入ったTシャツ',
     price: 4000,
-    imageUrl: teamZonoBack,
-    imageUrls: [teamZonoFront, teamZonoPrint],
+    imageUrl: teamZonoCover,
+    imageUrls: [teamZonoBack, teamZonoFront, teamZonoPrint],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M'],
