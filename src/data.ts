@@ -1,3 +1,18 @@
+import gpCover from './assets/images/gp-cover.webp';
+import gpLogo from './assets/images/gp-logo.webp';
+import gpLogoAngle from './assets/images/gp-logo-angle.webp';
+import blueRoseCover from './assets/images/blue-rose-cover.webp';
+import blueRoseWorn from './assets/images/blue-rose-worn.webp';
+import blueRoseArtwork from './assets/images/blue-rose-artwork.webp';
+import covidWhiteCover from './assets/images/covid-white-cover.webp';
+import covidWhiteWorn from './assets/images/covid-white-worn.webp';
+import covidWhiteBack from './assets/images/covid-white-back.webp';
+import covidWhitePrint from './assets/images/covid-white-print.webp';
+import covidBlackCover from './assets/images/covid-black-cover.webp';
+import covidBlackBackExtra from './assets/images/covid-black-back-extra.webp';
+import darumaHoodieBlack from './assets/images/daruma-hoodie-black.webp';
+import darumaHoodieWhite from './assets/images/daruma-hoodie-white.webp';
+import darumaHoodieFront from './assets/images/daruma-hoodie-front.webp';
 import hotokeCover from './assets/images/hotoke-cover.webp';
 import lionCover from './assets/images/lion-cover.webp';
 import butterflyCover from './assets/images/butterfly-cover.webp';
@@ -29,8 +44,6 @@ import { Product } from './types';
 import teamZonoFront from './assets/images/team-zono-front.webp';
 import teamZonoBack from './assets/images/team-zono-back.webp';
 import teamZonoPrint from './assets/images/team-zono-print.webp';
-import zono3 from './components/zono3.jpg';
-import zono31 from './components/zono31.jpg';
 import zono5 from './components/zono5.jpeg';
 import zono51 from './components/zono51.jpg';
 import zono52 from './components/zono52.jpg';
@@ -52,10 +65,6 @@ import zono83 from './components/zono83.jpg';
 import zono300 from './components/zono300.jpg';
 import zono301 from './components/zono301.jpg';
 import zono303 from './components/zono303.jpg';
-import img_5117 from './assets/images/IMG_5117.jpg';
-import img_5094 from './assets/images/IMG_5094.jpg';
-import img_5047 from './assets/images/IMG_5047.jpg';
-import img_5051 from './assets/images/IMG_5051.jpg';
 import lionFront from './assets/images/lion-front.webp';
 import lionPose from './assets/images/lion-pose.webp';
 import hotokeFront from './assets/images/hotoke-front.webp';
@@ -65,14 +74,6 @@ import hotokePrint from './assets/images/hotoke-print.webp';
 import zono21 from './components/zono21.jpg';
 import zono22 from './components/zono22.jpg';
 import zono23 from './components/zono23.jpg';
-import zono2 from './components/zono2.PNG';
-import zono24 from './components/zono24.jpg';
-import zono25 from './components/zono25.jpg';
-import zono26 from './components/zono26.PNG';
-import zono27 from './components/zono27.JPG';
-import zono28 from './components/zono28.jpg';
-import zono29 from './components/zono29.jpg';
-import zono299 from './components/zono299.jpg';
 
 export const products: Product[] = [
   {
@@ -80,8 +81,8 @@ export const products: Product[] = [
     name: 'DEEP WEST JAPAN BANTAM WEIGHT GP 『ZONO』　T-Shirt',
     description: 'DEEP WEST JAPAN BANTAM WEIGHT GP 2026トーナメントの際に着用する応援Tシャツ\nこれを着て一緒に戦ってください！！',
     price: 4000,
-    imageUrl: img_5117,
-    imageUrls: [img_5094, img_5047, img_5051],
+    imageUrl: gpCover,
+    imageUrls: [gpLogo, gpLogoAngle],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S'],
@@ -140,8 +141,8 @@ export const products: Product[] = [
     name: '『BLUE ROSE』T-Shirt',
     description: 'DEEP TOKYO IMPACT 2024 6th ROUND of 際のTシャツ',
     price: 4000,
-    imageUrl: zono3,
-    imageUrls: [zono31],
+    imageUrl: blueRoseCover,
+    imageUrls: [blueRoseWorn, blueRoseArtwork],
     category: 'T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['M', 'L'],
@@ -217,8 +218,8 @@ export const products: Product[] = [
     name: '『COVID-19』Dry T-Shirt(BLACK)',
     description: 'コロナの時期に作った頑張ろうという意味を込めて作ったドライTシャツ',
     price: 4000,
-    imageUrl: covidBlackFront,
-    imageUrls: [covidBlackAngle, covidBlackBack],
+    imageUrl: covidBlackCover,
+    imageUrls: [covidBlackFront, covidBlackAngle, covidBlackBack, covidBlackBackExtra],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     series: 'notorious qupid'
@@ -228,8 +229,8 @@ export const products: Product[] = [
     name: '『COVID-19』Dry T-Shirt(WHITE)',
     description: 'コロナの時期に作った頑張ろうという意味を込めて作ったドライTシャツ',
     price: 4000,
-    imageUrl: zono2,
-    imageUrls: [zono26, zono24, zono25],
+    imageUrl: covidWhiteCover,
+    imageUrls: [covidWhiteWorn, covidWhiteBack, covidWhitePrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
     series: 'notorious qupid'
@@ -239,8 +240,8 @@ export const products: Product[] = [
     name: '『DARUMA』Hooded Sweatshirt',
     description: '背面に大きなオリジナルのダルマをデザインしたフード付きトレーナー。',
     price: 8800,
-    imageUrl: zono27,
-    imageUrls: [zono28, zono29, zono24, zono299],
+    imageUrl: darumaHoodieBlack,
+    imageUrls: [darumaHoodieWhite, darumaHoodieFront],
     category: 'Hoodie',
     sizes: ['S', 'M', 'L', 'XL'],
     soldOutSizes: ['S', 'M', 'L', 'XL'],
