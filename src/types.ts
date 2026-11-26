@@ -7,6 +7,7 @@ export interface Product {
   imageUrls?: string[];
   category: 'T-Shirt' | 'Hoodie' | 'Accessories' | 'vintage T-Shirt' | 'Dry T-Shirt' | 'Long Sleeve' | 'Cap';
   sizes: string[];
+  colors?: string[];
   soldOutSizes?: string[];
   isSoldOut?: boolean;
   series: 'TEAM ZONO' | 'GOAT apparel' | 'notorious qupid';

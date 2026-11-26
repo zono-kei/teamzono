@@ -1,3 +1,11 @@
+import teamHoodieBlackBack from './assets/images/team-hoodie-black-back.webp';
+import teamHoodieNavyFront from './assets/images/team-hoodie-navy-front.webp';
+import teamHoodieWhiteSleeve from './assets/images/team-hoodie-white-sleeve.webp';
+import teamHoodieOliveFront from './assets/images/team-hoodie-olive-front.webp';
+import teamHoodieGrayBack from './assets/images/team-hoodie-gray-back.webp';
+import teamHoodieBrownSleeve from './assets/images/team-hoodie-brown-sleeve.webp';
+import teamHoodieCamelFront from './assets/images/team-hoodie-camel-front.webp';
+import teamHoodieCreamFront from './assets/images/team-hoodie-cream-front.webp';
 import teamZonoCover from './assets/images/team-zono-cover.webp';
 import teamZono2BlackCover from './assets/images/team-zono-2-black-cover.webp';
 import teamZono2BlackWorn from './assets/images/team-zono-2-black-worn.webp';
@@ -103,6 +111,18 @@ export const products: Product[] = [
     imageUrls: [teamZono2WhiteWorn, teamZono2WhitePrint],
     category: 'Dry T-Shirt',
     sizes: ['S', 'M', 'L', 'XL'],
+    series: 'TEAM ZONO'
+  },
+  {
+    id: '19',
+    name: '『TEAM ZONO』Hooded Sweatshirt',
+    description: 'TEAM ZONOのオリジナルパーカー。背面にはヤギをモチーフにした存在感のあるデザインを、右腕にはGOATの文字をあしらったクールな一着。',
+    price: 8800,
+    imageUrl: teamHoodieBlackBack,
+    imageUrls: [teamHoodieNavyFront, teamHoodieWhiteSleeve, teamHoodieOliveFront, teamHoodieGrayBack, teamHoodieBrownSleeve, teamHoodieCamelFront, teamHoodieCreamFront],
+    category: 'Hoodie',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['ブラック', 'ヘザーグレー', 'ホワイト', 'オリーブ', 'ミッドナイトネイビー', 'ダークブラウン', 'キャメル', 'クリーム'],
     series: 'TEAM ZONO'
   },
   {

@@ -20,7 +20,7 @@ export default function App() {
       <main className="mx-auto max-w-6xl px-5">
         <section className="border-b border-zinc-800 py-12 sm:py-20">
           <h1 className="font-display text-5xl font-bold uppercase leading-none tracking-tight sm:text-7xl">TEAM ZONO<br /><span className="text-blue-300">APPAREL</span></h1>
-          <p className="mt-5 max-w-xl leading-relaxed text-zinc-300">応援TシャツやGOATのオリジナルウェア。購入希望の方は、商品名と希望サイズを @zono_mma のDMへお送りください。最新の在庫もDMでご確認いただけます。</p>
+          <p className="mt-5 max-w-xl leading-relaxed text-zinc-300">応援TシャツやGOATのオリジナルウェア。購入希望の方は、商品名・希望サイズ・カラーを @zono_mma のDMへお送りください。最新の在庫もDMでご確認いただけます。</p>
           <nav aria-label="コレクション" className="mt-6 flex flex-wrap gap-2">
             {series.map((name, index) => <a key={name} className="rounded-full border border-zinc-700 px-4 py-2 text-sm hover:border-white" href={`#collection-${index}`}>{name}</a>)}
           </nav>
@@ -37,6 +37,7 @@ export default function App() {
                     <div className="flex flex-1 flex-col gap-2 p-3 sm:p-4">
                       <span className="text-sm font-bold leading-snug sm:text-base">{product.name}</span>
                       <span className="mt-auto font-semibold">¥{product.price.toLocaleString('ja-JP')}</span>
+                      {product.colors && product.colors.length > 0 && <span className="text-sm text-zinc-300">全{product.colors.length}色</span>}
                       <span className="text-sm text-zinc-300">{sizes.length ? sizes.join(' / ') : '売り切れ'}</span>
                     </div>
                   </button>

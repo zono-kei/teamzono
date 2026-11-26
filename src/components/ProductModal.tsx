@@ -13,11 +13,13 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const [failedImages, setFailedImages] = useState<string[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
   useEffect(() => {
     if (isOpen) {
       setCurrentImageIndex(0);
       setSelectedSize(null);
+      setSelectedColor(null);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -146,6 +148,24 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                   </div>
                 ) : (
                   <>
+                    {product.colors && product.colors.length > 0 && (
+                      <fieldset className="mb-6">
+                        <legend className="mb-3 text-sm font-medium tracking-wide text-white">カラー</legend>
+                        <div className="flex flex-wrap gap-2">
+                          {product.colors.map(color => (
+                            <button
+                              key={color}
+                              type="button"
+                              aria-pressed={selectedColor === color}
+                              onClick={() => setSelectedColor(color)}
+                              className={`min-h-11 rounded border px-3 py-2 text-sm font-medium transition-colors ${selectedColor === color ? 'border-white bg-white text-black' : 'border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700'}`}
+                            >
+                              {color}
+                            </button>
+                          ))}
+                        </div>
+                      </fieldset>
+                    )}
                     <div className="mb-6">
                       <div className="flex justify-between items-center mb-3">
                         <span className="text-white font-medium uppercase tracking-wide text-sm">サイズ</span>
@@ -157,6 +177,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                           return (
                             <button
                               key={size}
+                              aria-pressed={selectedSize === size}
                               disabled={isSizeSoldOut}
                               onClick={() => !isSizeSoldOut && setSelectedSize(size)}
                               className={`w-12 h-12 md:w-14 md:h-14 font-bold text-sm border transition-all shrink-0 ${
@@ -175,7 +196,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                     </div>
                     
                     <p className="mb-3 text-sm text-zinc-300">
-                      DMに商品名と希望サイズ{selectedSize ? `（${selectedSize}）` : ''}をお送りください。
+                      DMに商品名と希望サイズ{selectedSize ? `（${selectedSize}）` : ''}{product.colors?.length ? `、カラー${selectedColor ? `（${selectedColor}）` : ''}` : ''}をお送りください。
                     </p>
                     <a href="https://www.instagram.com/zono_mma/" className="block rounded-lg bg-white px-4 py-3 text-center font-semibold text-black hover:bg-blue-200">
                       Instagramで問い合わせる
